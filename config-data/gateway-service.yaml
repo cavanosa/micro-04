@@ -25,6 +25,10 @@ spring:
           uri: lb://car-service
           predicates:
             - Path=/car/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: car-service
         - id: motorbike-service
           uri: lb://motorbike-service
           predicates:
