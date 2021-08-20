@@ -7,17 +7,3 @@ eureka:
 spring:
   application:
     name: registry-server
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-        routes:
-          - id: car-service
-              uri: lb://car-service
-              predicates:
-                - Path=/car/**
-          - id: motorbike-service
-              uri: lb://motorbike-service
-              predicates:
-                - Path=/motorbike/**
