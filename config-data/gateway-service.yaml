@@ -34,14 +34,14 @@ spring:
       client:
         provider:
           keycloak:
-            token-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/token
+            issuer-uri: http://localhost:8180/auth/realms/test-gateway-01
             authorization-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/auth
             userinfo-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
         registration:
-          keycloak-with-test-scope:
+          test-scope:
             provider: keycloak
             client-id: test-scope
             client-secret: b199b840-0903-4427-913e-daed697b005a
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            redirect-uri: "{baseUrl}/login/oauth2/code/test-scope"
