@@ -38,7 +38,6 @@ spring:
       client:
         provider:
           keycloak:
-            issuer-uri: http://localhost:8180/auth/realms/test-gateway-01
             authorization-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/auth
             userinfo-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
