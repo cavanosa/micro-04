@@ -1,0 +1,7 @@
+/car-service
+/motorbike-service
+/config-service
+/eureka
+/gateway-service
+/user-service
+zipkin-server-2.23.2-exec.jar

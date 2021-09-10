@@ -13,7 +13,6 @@ eureka:
 spring:
   cloud:
     gateway:
-      default-filters: TokenRelay
       discovery:
         locator:
           enabled: true
@@ -22,6 +21,8 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/user/**
+          filters:
+            - TokenRelay
         - id: car-service
           uri: lb://car-service
           predicates:
