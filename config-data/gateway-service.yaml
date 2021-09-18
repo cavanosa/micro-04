@@ -19,10 +19,10 @@ spring:
       routes:
         - id: user-service
           uri: lb://user-service
-          filters:
-            - AuthFilter
           predicates:
             - Path=/user/**
+          filters:
+            - AuthFilter
         - id: car-service
           uri: lb://car-service
           predicates:
