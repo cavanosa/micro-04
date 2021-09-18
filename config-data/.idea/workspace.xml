@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c1c40d-36fb-4d26-9b84-ff7e7b3f3d41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth-service/src/main/java/com/cavanosa/authservice/controller/AuthUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth-service/src/main/java/com/cavanosa/authservice/controller/AuthUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
