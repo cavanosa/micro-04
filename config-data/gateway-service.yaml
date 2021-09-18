@@ -13,8 +13,6 @@ eureka:
 spring:
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
       discovery:
         locator:
           enabled: true
@@ -23,8 +21,6 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/user/**
-          filters:
-            - RemoveRequestHeader=Cookie
         - id: car-service
           uri: lb://car-service
           predicates:
@@ -33,19 +29,3 @@ spring:
           uri: lb://motorbike-service
           predicates:
             - Path=/motorbike/**
-  security:
-    oauth2:
-      client:
-        provider:
-          keycloak:
-            authorization-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/auth
-            userinfo-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/userinfo
-            user-name-attribute: preferred_username
-            token-uri: http://localhost:8180/auth/realms/test-gateway-01/protocol/openid-connect/token
-        registration:
-          test-scope:
-            provider: keycloak
-            client-id: test-scope
-            client-secret: b199b840-0903-4427-913e-daed697b005a
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/test-scope"
